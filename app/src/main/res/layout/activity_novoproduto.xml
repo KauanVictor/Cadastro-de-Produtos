@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:background="#fff"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".novoproduto">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="50sp"
+        android:background="#8A8989">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Cadastrar novo produto"
+            android:gravity="center"
+            android:textColor="#fff"
+            android:textSize="20sp"/>
+    </androidx.appcompat.widget.Toolbar>
+
+    <Space
+        android:layout_width="20sp"
+        android:layout_height="20sp"/>
+
+      <EditText
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:hint="Código"
+          android:id="@+id/editCodigo"/>
+
+
+    <Space
+        android:layout_width="20sp"
+        android:layout_height="20sp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Descrição"
+        android:id="@+id/editDescricao"/>
+
+
+    <Space
+        android:layout_width="20sp"
+        android:layout_height="20sp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:hint="Preço Unitário"
+        android:id="@+id/editPreco"/>
+
+
+    <Space
+        android:layout_width="20sp"
+        android:layout_height="20sp"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#fff"
+        android:text="Cadastrar produto"
+        android:id="@+id/btnnovoproduto"/>
+
+
+</LinearLayout>
