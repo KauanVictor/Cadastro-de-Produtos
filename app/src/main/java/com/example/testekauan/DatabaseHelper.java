@@ -12,10 +12,6 @@ import java.util.ArrayList;
 
 public class DatabaseHelper extends SQLiteOpenHelper {
 
-
-
-
-
     public DatabaseHelper(@Nullable Context context)
     {
         super(context, "NOME_DB", null, 1);
