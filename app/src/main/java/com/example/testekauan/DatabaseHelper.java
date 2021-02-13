@@ -7,10 +7,11 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
 import androidx.annotation.Nullable;
-import java.util.ArrayList;
 
 
 public class DatabaseHelper extends SQLiteOpenHelper {
+
+
 
     public DatabaseHelper(@Nullable Context context)
     {
@@ -21,7 +22,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase sqLiteDatabase)
     {
 
-        sqLiteDatabase.execSQL("create Table produtos (codigo TEXT primary key, descricao TEXT, preco TEXT)");
+        sqLiteDatabase.execSQL("create Table produtos (codigo TEXT primary key, descricao TEXT, preco INTEGER)");
 
 
     }
@@ -42,7 +43,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         contentValues.put("Preco", preco);
 
 
-
         long result  = MyDB.insert("produtos", null, contentValues);
         if (result == -1)  return false;
 
@@ -50,25 +50,32 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             return true;
     }
 
-    public ArrayList visualizar()
+
+    public Cursor Lista()
     {
-        ArrayList<String> lista = new ArrayList<>();
-        SQLiteDatabase database = this.getWritableDatabase();
-        String s = "SELECT * FROM produtos";
-
-        Cursor cursor = database.rawQuery(s, null);
-        if (cursor.moveToFirst())
-        {
-            do {
-                lista.add(cursor.getString(0));
-            }
-
-            while (cursor.moveToNext());
-        }
-        return lista;
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor data = db.rawQuery("SELECT * FROM " + "produtos", null);
+        return data;
     }
 
+    public boolean delete(String codigo, String descricao, String preco)
+    {
 
+        SQLiteDatabase MyDB = this.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+        contentValues.put("Codigo", codigo);
+        contentValues.put("Descricao", descricao);
+        contentValues.put("Preco", preco);
+
+
+
+
+        long result  = MyDB.insert("produtos", null, contentValues);
+        if (result == -1)  return false;
+
+        else
+            return true;
+    }
 
 
 }

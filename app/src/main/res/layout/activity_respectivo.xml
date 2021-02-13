@@ -2,23 +2,22 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
-    android:layout_gravity="center"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    tools:context=".novoproduto">
-
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".respectivo">
 
     <Space
         android:layout_width="20sp"
         android:layout_height="20sp"/>
 
-      <EditText
-          android:layout_width="match_parent"
-          android:layout_height="wrap_content"
-          android:inputType="textCapSentences"
-          android:hint="Código"
-          android:id="@+id/editCodigo"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textCapSentences"
+        android:hint="Código"
+        android:id="@+id/editCodigo"/>
 
 
     <Space
@@ -55,8 +54,17 @@
         android:layout_gravity="center"
         android:background="#00918821"
         android:textColor="@color/colorPrimary"
-        android:text="Cadastrar produto"
-        android:id="@+id/btnnovoproduto"/>
+        android:text="Atualizar"
+        android:id="@+id/atualizar"/>
+
+    <Button
+        android:layout_width="200sp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="#00918821"
+        android:textColor="@color/colorPrimary"
+        android:text="Excluir"
+        android:id="@+id/excluir"/>
 
 
 </LinearLayout>

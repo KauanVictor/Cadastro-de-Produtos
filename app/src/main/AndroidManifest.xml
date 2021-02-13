@@ -9,8 +9,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".novoproduto" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".respectivo" android:label="Atualizar e/ou Excluir"></activity>
+        <activity
+            android:name=".novoproduto"
+            android:label="Cadastro de novo Produto" />
+        <activity
+            android:name=".MainActivity"
+            android:label="Cadastro de Produtos">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
